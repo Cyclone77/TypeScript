@@ -26,27 +26,27 @@ console.log(x);
 console.log(x[0].substr(1));
 //枚举
 var Color;
-(function (Color) {
+(function(Color) {
     Color[Color["Red"] = 0] = "Red";
     Color[Color["Green"] = 1] = "Green";
     Color[Color["Blue"] = 2] = "Blue";
 })(Color || (Color = {}));
 var c = Color.Green;
 //索引从1开始
-(function (Color) {
+(function(Color) {
     Color[Color["Red"] = 1] = "Red";
     Color[Color["Green"] = 2] = "Green";
     Color[Color["Blue"] = 3] = "Blue";
 })(Color || (Color = {}));
 var c = Color.Green;
 //或者全部手动赋值
-(function (Color) {
+(function(Color) {
     Color[Color["Red"] = 1] = "Red";
     Color[Color["Green"] = 2] = "Green";
     Color[Color["Blue"] = 4] = "Blue";
 })(Color || (Color = {}));
 var c = Color.Green;
-(function (Color) {
+(function(Color) {
     Color[Color["Red"] = 1] = "Red";
     Color[Color["Green"] = 2] = "Green";
     Color[Color["Blue"] = 3] = "Blue";
@@ -57,9 +57,10 @@ console.log(colorName); // 显示'Green'因为上面代码里它的值是2
 var notSure = 4;
 notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
-(function () {
+//Void
+function warnUser() {
     alert("This is my warning message");
-});
+}
 var unusable = undefined;
 //Null和Undefined
 var u = undefined;
@@ -75,13 +76,15 @@ function fail() {
 }
 // 返回never的函数必须存在无法达到的终点
 function infiniteLoop() {
-    while (true) {
-    }
+    while (true) {}
 }
 //类型断言
 //类型断言有两种形式。 其一是“尖括号”语法：
+
+//类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。
 var someValue = "this is a string";
 var strLength = someValue.length;
 //另一个为as语法：
 var someValue = "this is a string";
+var len = someValue.length;
 var strLength = someValue.length;

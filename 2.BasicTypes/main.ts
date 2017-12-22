@@ -54,7 +54,7 @@ notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
 
 //Void
-function warnUser():void(){
+function warnUser():void {
     alert("This is my warning message");
 }
 
@@ -90,4 +90,5 @@ let strLength: number = (<string> someValue).length;
 
 //另一个为as语法：
 let someValue: any = "this is a string";
+let len = someValue.length;
 let strLength: number = (someValue as string).length;
